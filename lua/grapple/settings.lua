@@ -199,7 +199,7 @@ local DEFAULT_SETTINGS = {
         end, { desc = "Select (split)" })
 
         -- Select (vertical split)
-        window:map("n", "|", function()
+        window:map("n", "<c-v>", function()
             local cursor = window:cursor()
             window:perform_close(TagActions.select, { index = cursor[1], command = vim.cmd.vsplit })
         end, { desc = "Select (vsplit)" })
